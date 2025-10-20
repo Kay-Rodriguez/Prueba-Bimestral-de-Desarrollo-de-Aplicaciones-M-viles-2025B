@@ -1,0 +1,23 @@
+
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reporte Mensual</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Total Gastos: ${{ totalMensual }}</ion-card-title>
+      <ion-card-subtitle>Promedio Diario: ${{ promedioDiario }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Comida: ${{ comida }}</p>
+      <p>Supermercado: ${{ supermercado }}</p>
+      <p>Transporte: ${{ transporte }}</p>
+      <p>Período: {{ fechaInicio }} - {{ fechaFin }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

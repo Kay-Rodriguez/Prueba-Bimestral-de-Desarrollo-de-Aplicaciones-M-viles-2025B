@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resumen de Gastos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Total Gastado: ${{ total }}</ion-card-title>
+      <ion-card-subtitle>Fecha: {{ fechaActual }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>Gastos Recientes</ion-list-header>
+    <ion-item *ngFor="let gasto of gastos">
+      <ion-label>
+        <h2>{{ gasto.descripcion }}</h2>
+        <p>{{ gasto.fecha }} - ${{ gasto.monto }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button expand="block" (click)="irANuevoGasto()">Agregar Nuevo Gasto</ion-button>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Galería de Recibos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let recibo of recibos">
+        <ion-card>
+          <ion-img [src]="recibo.foto"></ion-img>
+          <ion-card-content>
+            <h2>{{ recibo.descripcion }}</h2>
+            <p>{{ recibo.fecha }} - ${{ recibo.monto }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+ <ion-card *ngFor="let recibo of recibos">
+  <ion-img [src]="recibo.foto"></ion-img>
+  <ion-card-content>
+    <h2>{{ recibo.descripcion }}</h2>
+    <p>Monto: ${{ recibo.monto }}</p>
+    <p>Fecha: {{ recibo.fecha }}</p>
+    <p>Pagado por: {{ recibo.quienPago }}</p>
+  </ion-card-content>
+</ion-card>
